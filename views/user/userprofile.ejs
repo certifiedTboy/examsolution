@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Exams Solutions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/stylesheets/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/stylesheets/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/stylesheets/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="/stylesheets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/stylesheets/css/owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="/stylesheets/css/flexslider.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="/stylesheets/css/pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/stylesheets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	<!-- Modernizr JS -->
+	<script src="/javascripts/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	</head>
+	<body>
+		
+	
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="site">www.studentsexamssolution.com</p>
+						<p class="num">Call: +2347018810562</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/home"><img src="/images/images/logo.png"  width="130px" alt=""><span></span></a></div>
+					</div>
+				
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="/home">Home</a></li>
+							<li><a href="/materials">Materials</a></li>
+							
+							<!-- <li class="active"><a href="/about">About</a></li>
+							<li class="active"><a href="/blogs">Blogs</a></li>
+							<li><a href="/contact">Contact</a></li> -->
+							<%	if(currentUser){ %>
+								<li class="btn-cta"><a href="/logout"><span>Logout</span></a></li>
+								
+						<%	}else{ %>
+								<li class="btn-cta"><a href="/login"><span>Sign in</span></a></li>
+							<li class="btn-cta"><a href="/register"><span>Sign Up</span></a></li>
+						<%	} %>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="margin-bottom: 30px;">
+		<div class="row">
+		
+			<div class="col-md-12">
+				<form action="/search" method="GET">
+					<div class="form-group">
+						<input name="dsearch" class="form-control search-text-input input" type="search" placeholder="Search for Materials, course, topics, questions, past-questions" width="100%" required>
+						
+					</div>
+					
+					<div id='button-holder'>
+					<button style="border: none; background: none;"> <i class="fas fa-search"></i></button>	  
+					</div>
+					
+				</form>
+				
+			</div>
+		
+		</div>
+	
+	</div>	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+
+			</div>
+			<div class="col-md-6">
+				<strong><h5 class="error-message"><%= error %></h5></strong>
+				<strong></strong><h5 class="success-message"><%= success %></h5></strong>
+			</div>
+			<div class="col-md-3">
+
+			</div>
+		</div>
+	</div>
+
+	
+<div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+            <div>
+                <div class="card list-group">
+
+					<% if(currentUser && user._id.equals(currentUser._id)){%>
+						<li class="list-group-item active"><strong><span style="margin-right: 10px; font-size: 20px;"><i class="fas fa-user-circle"></i></span> <%= user.username %> </strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-school"></i></span> <%= user.institution %> </strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="far fa-building"></i></span> <%= user.faculty %></strong></li>
+						<li class="list-group-item"><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-building"></i></span> <%= user.department %></strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-layer-group"></i></span> <%= user.level %></strong></li>
+						<li  class="list-group-item"><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fab fa-whatsapp-square"></i></span><a style="text-decoration: none; color: inherit;" href="https://wa.me/+234<%= user.phoneNumber %>" title="Chat user on Whatsapp" target="_blank">+234<%= user.phoneNumber %></a></strong></li>
+						<li  class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-mail-bulk"></i></i></span><a style="text-decoration: none; color: inherit;" href="mailto:<%= user.email %>" title="Send Mail" target="_blank"> <%= user.email %></a></strong></li> 
+					
+					<% } else if(!user.isPrivate){ %>
+						<li class="list-group-item active"><strong><span style="margin-right: 10px; font-size: 20px;"><i class="fas fa-user-circle"></i></span> <%= user.username %> </strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-school"></i></span> <%= user.institution %> </strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="far fa-building"></i></span> <%= user.faculty %></strong></li>
+						<li class="list-group-item"><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-building"></i></span> <%= user.department %></strong></li>
+						<li class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-layer-group"></i></span> <%= user.level %></strong></li>
+						<li  class="list-group-item"><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fab fa-whatsapp-square"></i></span><a style="text-decoration: none; color: inherit;" href="https://wa.me/+234<%= user.phoneNumber %>" title="Chat user on Whatsapp" target="_blank">+234<%= user.phoneNumber %></a></strong></li>
+						<li  class="list-group-item "><strong> <span style="margin-right: 5px; font-size: 20px;"><i class="fas fa-mail-bulk"></i></i></span><a style="text-decoration: none; color: inherit;" href="mailto:<%= user.email %>" title="Send Mail" target="_blank"> <%= user.email %></a></strong></li> 
+					<% } else{ %>
+						<p style="font-weight: 600; color: black;">User Account is Private</p>
+
+					<% } %>
+					
+                  </div>
+				  <% if(currentUser && user._id.equals(currentUser._id)){%>
+					<div style=" margin-top: 10px;">
+						<div class="dropdown" style="">
+							<button style="background: none; border: none;" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							<span style="font-weight: 600; color: rgb(0, 0, 0); "><a style="text-decoration: none; color: rgb(0, 0, 0); font-weight: 600;" href="" title="Account Privacy Option">Who should see you profile     ...</span> 
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background:white; border: none; border-radius: 7px;">
+								
+							
+							<li>
+								<a class="" style="background:none; border: none; font-weight: 600; color:black;" href=""></a>	
+							</li>
+							<li style="color: black; padding-left: 13px;">
+								<form action="/privacy/<%= user.id%>" method="POST">
+									<input type="hidden" name="privacy" value="privacy">
+									
+									<input type="submit" value="Only Me" style="background: none;  border: none; font-weight: 600; ">
+								</form>
+							</li>
+							<li style="color: black; padding-left: 13px;">
+								<form action="/public/<%= user.id%>" method="POST">
+									<input type="hidden" name="public" value="public">
+									<input type="submit" value="Everybody" style="background: none;  border: none; font-weight: 600; ">
+								</form>
+							</li>
+							</ul>
+						
+						  </div>
+						 </div>
+				  <% } %>
+				
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6"style="background-color: rgb(0, 4, 19);">
+            <hr>
+			<% if(allPosts.length > 0){ %>
+				<h3 class="user_notification">Recent Posts By :  <%= user.username %></h3>
+				<% allPosts.forEach(function(data){ %>
+            <div class="well">
+                <h3><%= data.course %> - <%= data.code %></h3>
+                <div class="caption-full">
+                    <h3 class="faculty">Faculty: <%= data.faculty %> </h3>
+						<h5>Department: <%= data.department %></h5>
+						<p class="topic">Topic: <%= data.topic %></p>
+                  </div>
+            </div>
+			<div style="float: right; margin-top: ;">
+				<div class="dropdown dropdown_btn">
+					<button class="dropdown-toggle dropdown_background" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					<span class="dropdown_span"><a class="dropdown_link" href="" > ...</span> 
+					</button>
+					<ul class="dropdown-menu dropdown_menubg" aria-labelledby="dropdownMenuButton1">
+						<!-- <li>  <a class="dropdownmenu_link" href="/materials/<%=data._id %>">Veiw Comments</a></li> -->
+
+						<!-- FOR SOCKET.IO -->
+						<% if(data.picspath){ %>
+							<form action="/materials/<%=data.id%>">
+						<% }else{ %>
+							<form action="/questions/<%=data.id%>">
+						<% } %>
+						
+							<input type="hidden" name="username" id="username" value="<%=currentUser.username%>"/>
+							<input type="hidden" value="<%=data.id%>" name="room" id="room">
+							<div class="text-center">
+							  <button class="" style="background:none; border: none; color: white;">Veiw Comments  <span class="ion-ios-arrow-forward"></span></button>
+							</div>
+						  
+						  </form>
+
+						  <!-- FOR SOCKET.IO -->
+						
+					<% if(currentUser && data.user.id.equals(currentUser._id)){%>
+					<li>
+						<a class="dropdownmenu_links" href="/materials/<%=data._id %>/edit">Edit</a>	
+					</li>
+					<li class="dropdownmenu_link2">
+						<form action="/materials/<%= data._id %>?_method=DELETE" method="POST"> 
+							<input type="submit" value="Delete" style="background: none;  border: none; font-weight: 600; ">
+						</form>	
+					</li>
+				
+					<% } %>
+					</ul>
+				
+				  </div>
+			</div>
+            <div class="desc_box">
+				<pre class="description"><%= data.desc%>
+				
+              </div>
+			
+				<div class="download_link" >
+					<% if(data.picspath){ %>
+					<form class="download_form" action="/download/<%= data._id %>" method="GET">  
+						<button class="download_btn" type="submit" title="Download File"><i class="fas fa-file-download"></i></button>
+					  </form> 
+					  <%  } %>
+					  <a class="back_btn" href="/materials" title="Go Back"><i class="fas fa-undo"></i></a>
+					 
+				</div>		
+		
+              	  
+            <%})%>
+			
+			<% } else { %>
+				<%	if(currentUser && user._id.equals(currentUser._id)){ %>
+					<h3 class="user_notification">You don't have any Recent Post Yet <br> <br> We need your post to help other students <br> <br> And to support the growth of the community</h3>
+				<%	}else{ %>
+					<h3 class="user_notification">User doesn't have a recent Post yet</h3>
+				<%	} %>
+			<% }%>
+        </div>
+
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+    </div>
+</div>
+
+<div class="row copyright mt-0" style="background-color: grey;">
+	<div class="col-md-12 text-center">
+		<p style="color:white">
+			&copy; 2021 SMS exam Solution. All Rights Reserved.
+			Designed by <a href="http://freehtml5.co/" target="_blank">INFINITE_IDEAS</a> <a href="#" target="_blank">
+		</p>
+	</div>
+	</div>
+</div>
+
+<!-- <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="/javascripts/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="/javascripts/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/javascripts/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/javascripts/js/jquery.waypoints.min.js"></script>
+<!-- Stellar Parallax -->
+<script src="/javascripts/js/jquery.stellar.min.js"></script>
+<!-- Carousel -->
+<script src="/javascripts/js/owl.carousel.min.js"></script>
+<!-- Flexslider -->
+<script src="/javascripts/js/jquery.flexslider-min.js"></script>
+<!-- countTo -->
+<script src="/javascripts/js/jquery.countTo.js"></script>
+<!-- Magnific Popup -->
+<script src="/javascripts/js/jquery.magnific-popup.min.js"></script>
+<script src="/javascripts/js/magnific-popup-options.js"></script>
+<!-- Count Down -->
+<script src="/javascripts/js/simplyCountdown.js"></script>
+<!-- Main -->
+<script src="/javascripts/js/main.js"></script>
+<script src="/javascripts/js/custom.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+

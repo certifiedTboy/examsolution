@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Exams Solutions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/stylesheets/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/stylesheets/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/stylesheets/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="/stylesheets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/stylesheets/css/owl.theme.default.min.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="/stylesheets/css/flexslider.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+
+	<!-- Pricing -->
+	<link rel="stylesheet" href="/stylesheets/css/pricing.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/stylesheets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	<!-- Modernizr JS -->
+	<script src="/javascripts/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+	<body>
+		
+	
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="site">www.studentsexamssolution.com</p>
+						<p class="num">Call: +2347018810562</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="/home"><img src="/images/images/logo.png"  width="130px" alt=""><span></span></a></div>
+					</div>
+				
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/materials">Materials</a></li>
+							<%	if(currentUser){ %>
+								<li class="btn-cta"><a href="/logout"><span>Logout</span></a></li>
+								
+						<%	}else{ %>
+								<li class="btn-cta"><a href="/login"><span>Sign in</span></a></li>
+							<li class="btn-cta"><a href="/register"><span>Sign Up</span></a></li>
+						<%	} %>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+		
+			<div class="col-md-12">
+				<form action="/search" method="GET">
+					<div class="form-group">
+						<input name="dsearch" class="form-control search-text-input input" type="search" placeholder="Search for Materials, course, topics, questions, past-questions" width="100%" required>
+						
+					</div>
+					
+					<div id='button-holder'>
+					<button style="border: none; background: none;"> <i class="fas fa-search"></i></button>	  
+					</div>
+					
+				</form>
+				
+			</div>
+		
+		</div>
+	
+	</div>	
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+
+			</div>
+			<div class="col-md-6 text-center">
+				<strong><h5 class="error-message"><%= error %></h5></strong>
+				<strong></strong><h5 class="success-message"><%= success %></h5></strong>
+			</div>
+			<div class="col-md-3">
+
+			</div>
+		</div>
+	</div>
+	  <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card list-group">
+						
+						  <li class="list-group-item active"><strong><a style="color: white; text-decoration: none;" href="/userprofile/user/<%= currentUser._id %>"> <span style="margin-right: 10px; font-size: 20px;"><i class="fas fa-user-circle"></i></span> <%= currentUser.username %> </a></strong></li>
+						<br>
+						<li class="list-group-item active"><strong><a style="color: white; text-decoration: none;" href="/materials" title="Go back"> <span style="margin-right: 10px; font-size: 20px;"><i class="fas fa-file-pdf"></i></span> Back </a></strong></li>
+						
+					  </div>
+				  </div>
+
+				<div class="col-sm-6" style="background-color: rgb(0, 0, 46);">
+					<hr>
+					<div class="animate-box">
+						<div class="card well">
+							<h2 class="card-header">
+								<%= question.course %> - <%= question.code %>
+							</h2>
+							<div class="caption-full">
+								<h3>Topic: <%= question.topic %></h3>
+								<p> Posted By: <strong> <a href="/userprofile/user/<%= question.user.id %>"><%= question.user.username %></a></strong> </p>
+							<strong>	<p> <%= question.createdAt.toDateString() %>  (<%= moment(question.createdAt).fromNow() %>)</p> </strong>
+							</div>
+						</div>
+						<div style="float: right; padding-right: 20px;">
+							<div class="dropdown">
+								<button style="background: none; border: none;" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								<span style="font-weight: 600; color: white; margin-left: 100px;"><a style="text-decoration: none; color: white; font-weight: 700;" href="" > ...</span> 
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background: burlywood; border: none; border-radius: 7px;">
+									
+									<% if(currentUser && question.user.id.equals(currentUser._id)){%>
+								<li>
+									<a class="" style="background:none; border: none; font-weight: 600; color:black;" href="#"></a>	
+								</li>
+								<li style="padding-left: 13px; color:black;">
+									<form action="/questions/deletequestion/<%= question._id %>?_method=DELETE" method="POST"> 
+										<input type="submit" value="Delete" style="background: none;  border: none; font-weight: 600; ">
+									</form>	
+								</li>
+							
+								<% } %>
+								</ul>
+							
+							  </div>
+						</div>
+						<div style="border: 2px solid black; background-color: burlywood; border-radius: 7px; margin-bottom: 20px; padding-right: 30px;">
+							<pre style="overflow: hidden; background: none; border: none; font-family: inherit !important; margin-left: 18px; font-size: 13px;  white-space: pre-wrap;  word-wrap: break-word; word-break: keep-all; padding: 0; margin-top: 20px; width: 100%;"><%= question.question%>
+							
+						</div>
+						<div class="" style="margin-bottom: 20px;">
+						
+							<a style="background: none; border: none; font-weight: 600; color: white; margin-right: 6px;" href="/materials" title="Go Back"><i class="fas fa-undo"></i></a>
+						</div>	
+					</div>
+						
+					
+				</div>
+				
+				<div class="col-md-3">
+						<!-- <h1 class="d-none d-sm-block">
+							
+						</h1> -->
+				</div>
+				
+			</div>
+	  </div>
+		<div>
+			
+		</div>
+			<div class="container dis cmtDiv animate-box">
+				<div class="row">
+					<div class="col-sm-3">
+
+					</div>
+					<div class="col-sm-6">
+						<div id="comment">
+							<% question.questionComments.forEach((comment) => { %>
+								<div  class="comment_div">
+									<div style="display: inline;">
+										<h5 class="comment_username"><i class="far fa-user-circle"></i> <a href="/userprofile/username/<%=comment.user.username %>" class="comment_usernamelink"><%=comment.user.username %></a></h5>
+										<div class="dropdown_div">
+											<div class="dropdown">
+												<button class="dropdown-toggle dropdown_btn2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+												<span class="dropdown_btndot"><a class="dropdownbtn_link" href="#" title="Delete Comment"> ...</a></span> 
+												</button>
+												<ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenuButton1">
+													<% if(currentUser && (comment.user.username === currentUser.username)){%>
+												 <li class="dropdown-item" style="background: none;"> 
+													<form action="/questions/<%=question._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+														<input type="submit" value="Delete" style="background: none; border: none;">
+													</form>
+												
+												
+											</li>
+											<% } %>
+												</ul>
+											  </div>
+									
+									</div>
+									</div>
+									
+									<h5 class="comment_time"><%=comment.createdAt.toDateString() %> (<%=moment(comment.createdAt).fromNow() %>) </h5>
+									
+									<pre class="comment_text"> <%=comment.text %>
+									
+								
+								</div>
+							<% }) %>
+						</div>
+					</div>
+					<div class="col-sm-3">
+
+					</div>
+				</div>
+			</div>
+
+		<div class="container" style="margin-top: 10px; margin-bottom: 10px;">
+			<div class="row">
+				<div class="col-sm-3">
+
+				</div>
+				<div class="col-sm-6">
+					<div>
+						<div>
+							<button style="background: none; border: none; color: rgb(4, 4, 39); font-weight: 600;" class="mb-5 cmtBtnShow" type="button">See Comments</button> <button style="background: none; border: none; color: rgb(4, 4, 39); font-weight: 600;" class="mb-5 cmtBtnHide" type="button">Hide Comments</button>
+						</div>
+						<form id="chat-form">
+							<input type="hidden" value="<%=currentUser.username%>" id="name">
+							<div class="form-group">
+								<p><strong>Enter Comment</strong> <textarea  id="msg"  style="border-radius: 8px;" name="message" class="textarea resize-ta"></textarea></p>
+							</div>
+							
+							<button >Comment</button>
+						</form>
+					</div>
+				
+				</div>
+				<div class="col-sm-3">
+				
+				
+				</div>
+			</div>
+		</div>
+	
+		<div class="row copyright mt-0" style="background-color: grey;">
+			<div class="col-md-12 text-center">
+				<p style="color:white">
+					&copy; 2021 SMS exam Solution. All Rights Reserved.
+					Designed by <a href="http://freehtml5.co/" target="_blank">INFINITE_IDEAS</a> <a href="#" target="_blank">
+				</p>
+			</div>
+			</div>
+	</div>
+
+	<!-- <div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div> -->
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="/javascripts/js/custom2.js"></script>
+	<!-- jQuery -->
+	<script src="/javascripts/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/javascripts/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/javascripts/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/javascripts/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="/javascripts/js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="/javascripts/js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="/javascripts/js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="/javascripts/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/javascripts/js/jquery.magnific-popup.min.js"></script>
+	<script src="/javascripts/js/magnific-popup-options.js"></script>
+	<!-- Count Down -->
+	<script src="/javascripts/js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="/javascripts/main2.js"></script>
+	<script src="/javascripts/js/main.js"></script>
+	<script src="/javascripts/js/custom.js"></script>
+	<script src="/javascripts/data.js"></script>
+	<script>
+  	function calcHeight(value) {
+  let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+  // min-height + lines x line-height + padding + border
+  let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2;
+  return newHeight;
+}
+
+let textarea = document.querySelector(".resize-ta");
+textarea.addEventListener("keyup", () => {
+  textarea.style.height = calcHeight(textarea.value) + "px";
+});
+
+	</script>
+	</body>
+</html>
+
