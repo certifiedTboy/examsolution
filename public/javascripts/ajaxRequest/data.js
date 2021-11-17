@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     getdata();
@@ -303,7 +302,7 @@ $(document).ready(function () {
                                         </form> 
 
                                       
-                                        <a href="/${data._id}" type="button" class="download_btn" target="_blank" title="Preview"><i class="far fa-file-pdf"></i></a>
+                                        <a href="/preview/${data._id}" type="button" class="download_btn" target="_blank" title="Preview"><i class="far fa-file-pdf"></i></a>
                                        
                                 </div>  
                                

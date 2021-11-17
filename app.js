@@ -76,7 +76,7 @@ app.get('/download/:id', async (req, res) => {
 })
 
 // stream pdf files on web-browser
-app.get('/:id', async (req, res) => {
+app.get('/preview/:id', async (req, res) => {
 	try {
 		const material = await Material.findById(req.params.id, (err, data) => {
 			if (err) {
@@ -88,7 +88,6 @@ app.get('/:id', async (req, res) => {
 					fs.createReadStream(path).pipe(res)
 				} else {
 					res.status(500)
-					console.log('File not found')
 					res.send('File not found')
 				}
 			}

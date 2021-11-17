@@ -162,7 +162,7 @@ router.get("/search", async (req, res) => {
     if (!foundData) {
       res.json({ msg: 'error' })
     } else {
-      res.json({ msg: 'success', material: foundData })
+      res.render('search', { foundData })
     }
   } catch (error) {
     console.log(error);

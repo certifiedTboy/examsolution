@@ -546,36 +546,6 @@ $(document).ready(() => {
 			}
 		});
 	}
-
-	// search query 
-
-	function getSearchResult() {
-		$.ajax({
-			type: "GET",
-			url: "/search",
-			beforeSend: function () {
-				$('#loader').removeClass('hidden')
-			},
-			success: (response) => {
-				//clear old data
-				$("#generalDiv").html('')
-				if (response.msg == 'success') {
-					$.each(response.material, (index, data) => {
-						$("#generalDiv").append(`<div id="fh5co-contact">
-						<button value="${data._id}" class="del">Delete</button>
-			
-				`);
-					})
-				}
-
-
-			},
-			error: (err) => {
-				$("#listFiles").html(err.responseText);
-			}
-		});
-	}
-
 	function getBlogPosts() {
 		$.ajax({
 			type: "GET",
