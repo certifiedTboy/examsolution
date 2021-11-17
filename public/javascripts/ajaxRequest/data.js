@@ -217,6 +217,9 @@ $(document).ready(function () {
                                         <span class="dropdown_btndot"><a class="dropdownbtn_link" href="" > ...</span> 
                                         </button>
                                         <ul class="dropdown-menu dropdown_menubg" aria-labelledby="dropdownMenuButton1">
+                                        <li>
+                                        <a href="#"></a>
+                                        </li>
                                             ${(() => {
                                 if (data.question) {
                                     return `
@@ -302,7 +305,7 @@ $(document).ready(function () {
                                         </form> 
 
                                       
-                                        <a href="/preview/${data._id}" type="button" class="download_btn" target="_blank" title="Preview"><i class="far fa-file-pdf"></i></a>
+                                        <a href="/preview/${data._id}" type="button" class="download_btn" target="_blank" title="Preview"><i class="fas fa-search"></i></a>
                                        
                                 </div>  
                                
