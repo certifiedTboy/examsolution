@@ -114,6 +114,7 @@ $(document).ready(() => {
 				$('#loader').removeClass('hidden')
 			},
 			success: (response) => {
+				let user = response.user;
 				//clear old data
 				$("#generalDiv").html('')
 				if (response.msg == 'success') {
@@ -245,26 +246,29 @@ $(document).ready(() => {
 				
 				<p id="total" style="font-size: 200px;"></p>
 				
-				
-				
-				<div class="container text-center" style="margin-bottom: 100px; margin-top: 100px;">
-					<div class="row">
-						<div class="col-3 col-sm-3 col-md-4">
-				
-						</div>
-						<div class="col-6 col-sm-6 col-md-4">
-							<div>
-								<h4>Join Us Now to connect with other Amazing Students</h4>
-							</div>
-							<div>
-								<a href="/register" class="btn btn-warning">Join Us  <span> <i class="fas fa-users"></i></span></a>
-							</div>
-						</div>
-						<div class="col-3 col-sm-3 col-md-4">
-				
-						</div>
-					</div>
-				</div>
+				${(() => {
+							if (!user) {
+								return `<div class="container text-center" style="margin-bottom: 100px; margin-top: 100px;">
+								<div class="row">
+									<div class="col-3 col-sm-3 col-md-4">
+							
+									</div>
+									<div class="col-6 col-sm-6 col-md-4">
+										<div>
+											<h4>Join Us Now to connect with other Amazing Students</h4>
+										</div>
+										<div>
+											<a href="/register" class="btn btn-warning">Join Us  <span> <i class="fas fa-users"></i></span></a>
+										</div>
+									</div>
+									<div class="col-3 col-sm-3 col-md-4">
+							
+									</div>
+								</div>
+							</div>`;
+							}
+						})()
+						}
 				`);
 					complete()
 				}

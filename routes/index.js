@@ -53,9 +53,11 @@ router.use(function (req, res, next) {
 });
 
 // HOME ROUTE
-router.get("/", (req, res) => res.render("index"));
+router.get('/', (req, res) => {
+  res.render('index', { user: req.user })
+})
 router.get('/home', (req, res) => {
-  res.json({ msg: 'success' })
+  res.json({ msg: 'success', user: req.user })
 })
 
 // LOGIN ROUTE
