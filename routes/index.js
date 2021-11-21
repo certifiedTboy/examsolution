@@ -129,7 +129,6 @@ router.get('/userprofile/user/:id', isLoggedIn, async (req, res) => {
         res.status(404).json({ message: 'User not found' })
       } else {
         const allPosts = [...user.materials, ...user.questions]
-        console.log(user)
         res.render("user/userprofile", { user, allPosts })
       }
     })

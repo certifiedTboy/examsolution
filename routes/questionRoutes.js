@@ -57,7 +57,7 @@ router.delete("/questions/deletequestion/:id", isLoggedIn, checkQuestionOwnershi
         if (err) {
           res.status(404).json({ message: "something went wrong" });
         } else {
-          res.redirect("back");
+          res.redirect('/materials');
           // res.json({ msg: "success" });
         }
       }

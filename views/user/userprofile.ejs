@@ -91,10 +91,6 @@
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li><a href="/materials">Materials</a></li>
-							
-							<!-- <li class="active"><a href="/about">About</a></li>
-							<li class="active"><a href="/blogs">Blogs</a></li>
-							<li><a href="/contact">Contact</a></li> -->
 							<%	if(currentUser){ %>
 								<li class="btn-cta"><a href="/logout"><span>Logout</span></a></li>
 								
@@ -131,22 +127,6 @@
 	
 	</div>	
 	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-
-			</div>
-			<div class="col-md-6">
-				<strong><h5 class="error-message"><%= error %></h5></strong>
-				<strong></strong><h5 class="success-message"><%= success %></h5></strong>
-			</div>
-			<div class="col-md-3">
-
-			</div>
-		</div>
-	</div>
-
-	
 <div class="container" style="margin-bottom: 50px;">
     <div class="row">
         <div class="col-sm-12 col-md-3">
@@ -177,8 +157,8 @@
 					
                   </div>
 				  <% if(currentUser && user._id.equals(currentUser._id)){%>
-					<div style=" margin-top: 10px;">
-						<div class="dropdown" style="">
+					<div style="margin-top: 10px;">
+						<div class="dropdown">
 							<button style="background: none; border: none;" class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 							<span style="font-weight: 600; color: rgb(0, 0, 0); "><a style="text-decoration: none; color: rgb(0, 0, 0); font-weight: 600;" href="" title="Account Privacy Option">Who should see you profile     ...</span> 
 							</button>
@@ -249,10 +229,15 @@
 						
 					<% if(currentUser && data.user.id.equals(currentUser._id)){%>
 					<li>
-						<a class="dropdownmenu_links" href="/materials/<%=data._id %>/edit">Edit</a>	
+						<a class="dropdownmenu_links" href="#"></a>	
 					</li>
 					<li class="dropdownmenu_link2">
-						<form action="/materials/<%= data._id %>?_method=DELETE" method="POST"> 
+						<% if(data.question){%>
+							<form action="/questions/deletequestion/<%= data._id %>?_method=DELETE" method="POST"> 
+						<% }else{ %>
+							<form action="/materials/deletepost/<%= data._id %>?_method=DELETE" method="POST"> 
+						<%}%>
+						
 							<input type="submit" value="Delete" style="background: none;  border: none; font-weight: 600; ">
 						</form>	
 					</li>
@@ -284,7 +269,7 @@
 				<%	if(currentUser && user._id.equals(currentUser._id)){ %>
 					<h3 class="user_notification">You don't have any Recent Post Yet <br> <br> We need your post to help other students <br> <br> And to support the growth of the community</h3>
 				<%	}else{ %>
-					<h3 class="user_notification">User doesn't have a recent Post yet</h3>
+					<h3 class="user_notification">User doesn't have a Post yet</h3>
 				<%	} %>
 			<% }%>
         </div>

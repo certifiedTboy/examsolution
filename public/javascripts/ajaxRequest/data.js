@@ -5,8 +5,19 @@ $(document).ready(function () {
     $('#cancelEdit').click((event) => {
         event.preventDefault()
         $('#cancelBtn').addClass('d-none')
+        $('#fileFormBtn').show()
+        $('#qFormBtn').show()
         getdata();
+        if ($('#fileForm').hide()) {
+            $('#fileForm').show()
+        } else if ($('#qForm').hide()) {
+            $('#qForm').show()
+        } else {
+            $('#qForm').show()
+            $('#fileForm').show()
+        }
     })
+
     //questions post ajax 
     $('.addbtn2').click(function () {
         let course = $("#course2").val();
@@ -207,7 +218,7 @@ $(document).ready(function () {
                                         <h5>Department: ${data.department}</h5>
                                         <p class="topic">Topic: ${data.topic}</p>
                                         <p class="post_username">Posted By: <strong> <a href="/userprofile/user/${data.user.id}">${data.user.username}</a> </strong></p>
-                                        <p>${date.toDateString()} ${moment(date.toDateString()).fromNow()}</p>
+                                        <p>${date.toDateString()} ${moment(date).fromNow()}</p>
                                          
                                     </div>
                                 </div>
@@ -338,7 +349,11 @@ $(document).ready(function () {
                 if (response.msg == 'success') {
                     $("#ajax2").hide()
                     $("#generalDiv").show()
+                    $("#fileFormBtn").hide()
+                    $("#qFormBtn").hide()
                     $("#generalDiv").html('')
+                    $('#fileForm').hide()
+                    $('#qForm').hide()
                     let newMat = response.material
                     $('#cancelBtn').removeClass('d-none')
                     $("#generalDiv").append(`
@@ -415,6 +430,10 @@ $(document).ready(function () {
                     $("#ajax2").hide()
                     $("#generalDiv").show()
                     $("#generalDiv").html('')
+                    $("#fileFormBtn").hide()
+                    $("#qFormBtn").hide()
+                    $('#fileForm').hide()
+                    $('#qForm').hide()
                     let newMat = response.question
                     $('#cancelBtn').removeClass('d-none')
                     $("#generalDiv").append(`
