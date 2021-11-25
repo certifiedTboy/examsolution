@@ -1717,6 +1717,9 @@ figure {
   transition-duration: 4s;
   transition-delay: 2s;
 }
+.show {
+  display: inline-table;
+}
 /*# sourceMappingURL=style.css.map */
 /* additional styles */
 

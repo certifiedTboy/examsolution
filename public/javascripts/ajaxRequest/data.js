@@ -8,14 +8,7 @@ $(document).ready(function () {
         $('#fileFormBtn').show()
         $('#qFormBtn').show()
         getdata();
-        if ($('#fileForm').hide()) {
-            $('#fileForm').show()
-        } else if ($('#qForm').hide()) {
-            $('#qForm').show()
-        } else {
-            $('#qForm').show()
-            $('#fileForm').show()
-        }
+
     })
 
     //questions post ajax 
