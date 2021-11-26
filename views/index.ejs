@@ -115,12 +115,18 @@
 		<div class="container">
 		  <div>
 			 <ul class="mobileNav">
+				<%	if(currentUser){ %>
+					<li>
+						<a href="/logout"  class="mobileNavItem">Logout</i></a>
+					 </li>
+				<%}else{ %>
 				 <li>
 					<a href="/register"  class="mobileNavItem"><i class="fas fa-user-plus navIcon"></i></a>
 				 </li>
 				 <li>
 					<a href="/login"  class="mobileNavItem"><i class="fas fa-user-lock navIcon"></i></a>
 				 </li>
+				 <%	} %>
 				 <li>
 					<a href="" class="mobileNavItem getContactPage"><i id="contact" class="far fa-id-card navIcon"></i></a>
 				 </li>
