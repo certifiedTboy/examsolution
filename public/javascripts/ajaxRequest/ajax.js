@@ -3,33 +3,49 @@ $(document).ready(() => {
 	getHomePage()
 
 	//  GET aboutpage REQUEST
-	$("#getAboutBtn").click((event) => {
+	$(".getAboutBtn").click((event) => {
 		event.preventDefault();
+		$('#contact').removeClass('mobNavActive')
+		$('#home').removeClass('mobNavActive')
+		$('#about').addClass('mobNavActive')
+		$('#blog').removeClass('mobNavActive')
 		getAboutPage();
 	});
 
-	$("#getHomeBtn").click((event) => {
+	$(".getHomeBtn").click((event) => {
 		event.preventDefault();
+		$('#contact').removeClass('mobNavActive')
+		$('#home').addClass('mobNavActive')
+		$('#about').removeClass('mobNavActive')
+		$('#blog').removeClass('mobNavActive')
 		getHomePage();
 	});
 	// get contact page 
-	$('#getContactPage').click((event) => {
+	$('.getContactPage').click((event) => {
 		event.preventDefault()
+		$('#contact').addClass('mobNavActive')
+		$('#home').removeClass('mobNavActive')
+		$('#about').removeClass('mobNavActive')
+		$('#blog').removeClass('mobNavActive')
 		getContactPage()
 	})
 
-	$('#getTermsPage').click((event) => {
+	$('.getTermsPage').click((event) => {
 		event.preventDefault()
 		getTermsPage()
 	})
 
-	$('#searchForm').submit((event) => {
+	$('.searchForm').submit((event) => {
 		event.preventDefault()
 		getSearchResult()
 	})
 
-	$('#blogPostsBtn').click((event) => {
+	$('.blogPostsBtn').click((event) => {
 		event.preventDefault()
+		$('#contact').removeClass('mobNavActive')
+		$('#home').removeClass('mobNavActive')
+		$('#about').removeClass('mobNavActive')
+		$('#blog').addClass('mobNavActive')
 		getBlogPosts()
 	})
 	// DO GET

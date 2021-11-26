@@ -2043,3 +2043,46 @@ figure {
   margin-top: 20px;
   width: 100%;
 }
+
+.mobileNav {
+  padding: 0;
+  list-style: none;
+}
+.mobileNavItem {
+  margin-right: 55px;
+  float: right;
+}
+.navIcon {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 720px) {
+  .top-menu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .mobNav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobileNavItem {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .mobileNavItem {
+    margin-right: 20px;
+  }
+  .navIcon {
+    font-size: 30px;
+  }
+}
+
+.mobNavActive {
+  color: rgb(223, 26, 26);
+}
